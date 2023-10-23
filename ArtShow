@@ -1,0 +1,62 @@
+/*
+In this lab, you complete a partially prewritten Java program that includes methods with no parameters.
+The program asks the user if he or she has preregistered for tickets to an art show. 
+If the user has preregistered, the program should call a method named discount() that 
+displays the message, "You are preregistered and qualify for a 5 percent discount." 
+If the user has not preregistered, the program should call a method named noDiscount() that 
+displays the message, "Sorry, you did not preregister and do not qualify for a 5 percent discount."
+
+The source code file provided for this lab includes the necessary variable declarations and the input statement. 
+Comments are included in the file to help you write the remainder of the program.
+
+Instructions
+Ensure the file named ArtShow.java is open.
+Write the Java statements as indicated by the comments.
+Execute the program by clicking "Run Code." */
+
+// ArtShow.java - This program determines if an art show attendee gets a 5% discount
+// for preregistering. 
+// Input:  Interactive.
+// Output:  A statement telling the user if they get a discount or no discount. 
+
+import java.util.Scanner;
+
+public class ArtShow
+{
+	public static void main(String args[]) 
+	{
+		Scanner s = new Scanner(System.in);
+		String registerString;	
+						
+		System.out.println("Did you preregister? Enter Y or N: ");	
+						
+		registerString  = s.nextLine();
+				
+		// Test input here. If Y, call discount(), else call noDiscount(). 
+		if(registerString.equalsIgnoreCase("Y"))
+         discount();
+      else
+         noDiscount();
+	
+		System.exit(0);
+
+	} // End of main() method.
+	
+	
+	// Write discount method here.
+	
+   public static void discount()
+   {
+      System.out.println("You are preregistered and qualify for a 5 percent discount.");
+   }
+
+
+	// Write noDiscount method here. 
+	
+    public static void noDiscount()
+   {
+      System.out.println("Sorry, you did not preregister and do not qualify for a 5 percent discount.");
+   }
+
+} // End of ArtShow class.
+
